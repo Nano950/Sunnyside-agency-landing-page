@@ -1,8 +1,80 @@
-.attribution {
+html {
+    box-sizing: border-box;
+}
+
+.container { 
+    position: relative;
+    display: grid;
+    width: 100%;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 100vh 60vh 60vh 60vh 30vh 15vh 15vh;
+}
+
+img{
+    max-width: 100%;
+    max-height: 100%;
+}
+
+/* header styles */
+.header {
+    border: 1px solid black;
+    grid-column: 1 / span 2;
+    background-image: url("./images/desktop/image-header.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+header {
+    border: 1px solid black;
+    height: 5vh;
+}
+
+.header .logo {
+    border: 1px solid black;
+    position: relative;
+    top:50%;
+    left:20px;
+    display: inline-block;
+    transform: translateY(-50%);
+}
+
+ul{
+    border: 1px solid black;
+    float: right;
+    position: relative;
+    bottom:5%;
+}
+
+li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+}
+
+h1 {
+    border: 1px solid black;
+    text-align: center;
+}
+
+.arrow {
+    border: 1px solid black;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+
+/* footer stuff */
+
+
+
+/* .attribution {
     font-size: 11px; text-align: center;
 }
 
 .attribution a {
     color: hsl(228, 45%, 44%);
 }
-
+ */
