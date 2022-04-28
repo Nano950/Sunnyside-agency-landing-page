@@ -7,7 +7,7 @@ html {
     display: grid;
     width: 100%;
     grid-template-columns: 50% 50%;
-    grid-template-rows: 100vh 60vh 60vh 60vh 30vh 15vh 15vh;
+    grid-template-rows: 100vh 60vh 60vh 60vh 70vh 50vh 40vh;
 }
 
 img{
@@ -64,7 +64,16 @@ h1 {
     transform: translateX(-50%);
 }
 
+.transform-image {
+    background-image: url('./images/desktop/image-transform.jpg');
+    background-size: 100%;
+}
 
+.stand-out-image {
+    background-image: url("./images/desktop/image-stand-out.jpg");
+    background-size: 100%;
+
+}
 
 /* footer stuff */
 
