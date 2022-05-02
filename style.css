@@ -22,21 +22,22 @@ img{
 
 /* header styles */
 .header {
-    border: 1px solid black;
+    /* border: 1px solid black; */
     grid-column: 1 / span 2;
     background-image: url("./images/desktop/image-header.jpg");
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: bottom;
 }
 
 header {
-    border: 1px solid black;
+    /* border: 1px solid black; */
     height: 5vh;
+    padding: 8px 8px 8px 4px;
 }
 
-.header .logo {
-    border: 1px solid black;
+.logo {
+    /* border: 1px solid black; */
     position: relative;
     top:50%;
     left:20px;
@@ -44,8 +45,8 @@ header {
     transform: translateY(-50%);
 }
 
-ul{
-    border: 1px solid black;
+.header ul{
+    /* border: 1px solid black; */
     float: right;
     position: relative;
     bottom:5%;
@@ -57,39 +58,194 @@ li {
     margin: 0 20px;
 }
 
+.header a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-family: "Barlow";
+
+}
+
+.header .contact {
+    color:hsl(212, 27%, 19%);
+    font-family: "Fraunces";
+    border: 1px solid white;
+    padding: 10px 20px;
+    border-radius: 30px;
+    background-color: white;
+    font-weight: 700;
+}
+
 h1 {
-    border: 1px solid;
+    /* border: 1px solid; */
     color: white;
     font-family: "Fraunces";
     font-weight: 900;
     font-size: 48px;
-    letter-spacing: 1px;
+    letter-spacing: 10px;
     width: 100%;
     text-align: center;
+    position: relative;
+    top: 10%;
 }
 
 .arrow {
-    border: 1px solid black;
+    /* border: 1px solid black; */
     position: relative;
     left: 50%;
+    margin-top: 200px;
     transform: translateX(-50%);
 }
 
+
 .transform-image {
     background-image: url('./images/desktop/image-transform.jpg');
-    background-size: 100%;
+    background-size: 100%;   
 }
-
+    
 .stand-out-image {
     background-image: url("./images/desktop/image-stand-out.jpg");
-    background-size: 100%;
+    background-size: cover;
+    background-position: top;
 
 }
 
-/* footer stuff */
+.text-container {
+    /* border: 1px solid black; */
+    width: 50%;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    margin: 0 auto;
+}
 
+h2 {
+    font-family: "Fraunces";
+    font-weight: 900;
+    font-size: 36px;
+}
 
+.text-container p {
+    font-size: 18px;
+    font-family: "Barlow";
+    color: hsl(210, 4%, 67%);
+}
 
+.text-container a{
+    font-family: "Fraunces";
+    font-size: 18px;
+    text-decoration: none;
+    color:black;
+}
+
+.yellow {
+    border-bottom: 2px solid hsl(51, 100%, 49%);
+}
+
+.yellow:hover {
+    border-bottom: 6px solid hsl(51, 100%, 49%);
+}
+
+.pink {
+    border-bottom: 2px solid hsl(7, 99%, 70%);
+}
+
+.pink:hover {
+    border-bottom: 6px solid hsl(7, 99%, 60%);
+}
+
+.graphic-design {
+    background-image: url('./images/desktop/image-graphic-design.jpg');
+    background-size: cover;
+    background-position: top;
+}
+
+.photography {
+    background-image: url("./images/desktop/image-photography.jpg");
+    background-position: top;
+    background-size:cover;
+}
+
+.text {
+    /* border: 1px solid black; */
+    width: 50%;
+    margin:0 auto;
+    position: relative;
+    top: 60%;
+}
+
+h3 {
+    font-family: "Fraunces";
+    font-size: 24px;
+    text-align: center;
+    font-weight: 900;
+}
+
+.text p{
+    font-size: 18px;
+    font-family: "Barlow";
+    text-align: center;
+}
+
+.photography h3 {
+    color: hsl(198, 62%, 26%);
+}
+
+.photography .text {
+    color: hsl(198, 62%, 26%);
+}
+
+.graphic-design h3{
+   color: hsl(167, 40%, 24%);
+}
+
+.graphic-design .text {
+   color: hsl(167, 40%, 24%);
+
+}
+
+.testimonials {
+    grid-area: 5/ 1/ span 1/ span 2;
+}
+
+h4 {
+    color: hsl(210, 4%, 67%);
+    font-family: "fraunces";
+    font-size: 18px;
+    letter-spacing: 5px;
+    text-align: center;
+    position: relative;
+    top:15%;
+}
+
+.testimonial-flex {
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top:50%;
+    transform: translateY(-50%);
+}
+
+.profile {
+    border: 1px solid black;
+    width: 350px;
+}
+
+.profile p {
+    font-family: "Barlow";
+    font-size: 18px;
+    text-align: center;
+}
+
+.gallery {
+    grid-area: 6/ 1/ span 1/ span 2;
+}
+
+/* footer */
+.footer{
+    grid-area:7 / 1 / span 1 / span 2 ;
+}
 /* .attribution {
     font-size: 11px; text-align: center;
 }
