@@ -12,7 +12,7 @@ body{
     display: grid;
     width: 100%;
     grid-template-columns: 50% 50%;
-    grid-template-rows: 100vh 60vh 60vh 60vh 70vh 50vh 40vh;
+    grid-template-rows: 100vh 70vh 70vh 70vh 80vh 50vh 40vh;
 }
 
 img{
@@ -74,6 +74,12 @@ li {
     border-radius: 30px;
     background-color: white;
     font-weight: 700;
+}
+
+.header .contact:hover {
+    color: white;
+    background-color: hsl(210, 4%, 67%);
+    border-color:hsl(210, 4%, 67%);
 }
 
 h1 {
@@ -219,33 +225,103 @@ h4 {
 }
 
 .testimonial-flex {
-    border: 1px solid black;
+    /* border: 1px solid black; */
     display: flex;
-    justify-content: center;
     position: relative;
     top:50%;
     transform: translateY(-50%);
+    justify-content: center;
+    justify-content: space-around;
+}
+
+.profile img {
+    border-radius: 50%;
+    left: 50%;
+    position: relative;
+    transform: translateX(-50%);
+    width: 100px;
 }
 
 .profile {
-    border: 1px solid black;
+    /* border: 1px solid black; */
     width: 350px;
 }
 
 .profile p {
+    color: hsl(213, 9%, 39%);
     font-family: "Barlow";
     font-size: 18px;
     text-align: center;
 }
 
+.profile .name {
+    color: hsl(212, 27%, 19%);
+    font-family: "Fraunces";
+    font-weight: 900;
+}
+
+.profile .job {
+    color: hsl(210, 4%, 67%);
+    font-size: 14px;
+}
+
 .gallery {
+    /* border: 1px solid black; */
+    display: flex;
     grid-area: 6/ 1/ span 1/ span 2;
+    justify-content: center;
+}
+
+.milk, .orange, .cone, .sugar {
+    width: 100%;
+}
+
+.milk { 
+    background-image: url('./images/desktop/image-gallery-milkbottles.jpg');
+    background-size: cover;
+}
+
+.orange {
+    background-image: url("./images/desktop/image-gallery-orange.jpg");
+    background-size: cover;
+}
+
+.cone {
+    background-image: url("./images/desktop/image-gallery-cone.jpg");
+    background-size: cover;
+}
+
+.sugar {
+    background-image: url("./images/desktop/image-gallery-sugarcubes.jpg");
+    background-size: cover;
 }
 
 /* footer */
 .footer{
+    background-color: #90D4C5;
     grid-area:7 / 1 / span 1 / span 2 ;
 }
+
+.footer h3 {
+    color: hsl(168, 34%, 41%);
+    font-weight: 900;
+    border: 1px solid black;
+    font-size: 36px;
+}
+
+.footer ul {
+    border: 1px solid black;
+    margin: 0 auto;
+    width: fit-content;
+}
+
+.footer li {
+    color: hsl(168, 34%, 41%);
+    font-family: "Barlow";
+    font-size: 18px;
+}
+
+
 /* .attribution {
     font-size: 11px; text-align: center;
 }
