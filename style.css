@@ -12,25 +12,33 @@ body{
     position: relative;
     display: grid;
     width: 100%;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 50% 50%;
     grid-template-rows: 930px 700px 700px 700px 800px 500px 400px;
+    grid-template-areas: 
+    "head head"
+    "transform transform-img"
+    "stand-out-img stand-out"
+    "graphic-desgin photography"
+    "testimonials testimonials"
+    "gallery gallery"
+    "footer footer";
 }
 
 @media only screen and (max-width: 500px){
     .container {
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 930px 700px 700px 700px 700px 700px 700px 1200px  500px 400px; 
+        grid-template-columns: 100%;
+        grid-template-rows: 930px 700px 700px 700px 700px 700px 700px 1200px 500px 400px; 
         grid-template-areas: 
-        "header header"
-        "transform-img transform-img"
-        "transform transform"
-        "stand-out-img stand-out-img"
-        "stand-out stand-out"
-        "graphic-design graphic-design"
-        "photography photography"
-        "testimonials testimonials"
-        "gallery gallery"
-        "footer footer";
+        "header"
+        "transform-img"
+        "transform"
+        "stand-out-img"
+        "stand-out"
+        "graphic-design"
+        "photography"
+        "testimonials"
+        "gallery"
+        "footer";
     }
 }
 
@@ -42,7 +50,7 @@ img{
 /* header styles */
 .header {
     /* border: 1px solid black; */
-    grid-column: 1 / span 2;
+    grid-area: head;
     background-image: url("./images/desktop/image-header.jpg");
     background-size: cover;
     background-repeat: no-repeat;
@@ -87,7 +95,6 @@ li {
     text-decoration: none;
     font-size: 1.125rem;
     font-family: "Barlow";
-    
 }
 
 .header .contact {
@@ -139,7 +146,7 @@ h1 {
     }
 
     .hamburger {
-        display: inline-block;
+        display: block;
         float: right;
         position: relative;
         top: 50%;
@@ -154,13 +161,24 @@ h1 {
 }
 
 /* stand-out and transform styles */
+
+.transform {
+    grid-area: transform;
+}
+
 .transform-image {
+    grid-area: transform-img;
     background-image: url('./images/desktop/image-transform.jpg');
-    background-size: cover;  
-    
+    background-size: cover;
+    background-position: center;  
 }
 
 .stand-out-image {
+    grid-area: stand-out-img
+}
+
+.stand-out-image {
+    
     background-image: url("./images/desktop/image-stand-out.jpg");
     background-size: cover;
     background-position: top;
@@ -212,27 +230,27 @@ h2 {
 }
 
 @media only screen and (max-width: 500px) {
-    /* .transform-image {
+    .transform-image {
         grid-area: transform-img;
         background-position: center;
-    } */
+    }
 
-    /* .transform {
+    .transform {
         grid-area: transform;
-    } */
+    }
 
-    /* .stand-out-img {
+    .stand-out-image {
         grid-area: stand-out-img;
         background-position: center;
-    } */
+    }
     
-    /* .stand-out {
+    .stand-out {
         grid-area: stand-out;
-    } */
+    }
 
-    /* .footer {
-        grid-row-start: 10;
-    } */
+    .footer {
+        grid-area: footer;
+    }
 
 
     /* .text-container {
@@ -242,12 +260,14 @@ h2 {
 
 /* graphic desgin and photography styles */
 .graphic-design {
+    grid-area: graphic-desgin;
     background-image: url('./images/desktop/image-graphic-design.jpg');
     background-size: cover;
     background-position: top;
 }
 
 .photography {
+    grid-area: photography;
     background-image: url("./images/desktop/image-photography.jpg");
     background-position: top;
     background-size:cover;
@@ -292,9 +312,9 @@ h3 {
 }
 
 @media only screen and (max-width: 500px) {
-    /* .graphic-design {
+    .graphic-design {
         grid-area: graphic-desgin;
-    } */
+    }
 
     /* .photography {
         grid-area: photography;
@@ -302,7 +322,7 @@ h3 {
 }
 
 .testimonials {
-    grid-area: 5/ 1/ span 1/ span 2;
+    grid-area: testimonials;
 }
 
 h4 {
@@ -356,16 +376,16 @@ h4 {
     font-size: 0.875rem;
 }
 
-@media only screen and (max-width: 500px) {
+/* @media only screen and (max-width: 500px) { */
     /* .testimonials {
         grid-area: tesimonials;
     }*/
- } 
+ /* }  */
 
 .gallery {
-    border: 1px solid black;
+    /* border: 1px solid black; */
     display: flex;
-    grid-area: 6/ 1/ span 1/ span 2;
+    grid-area: gallery;
     justify-content: center;
 }
 
@@ -393,8 +413,9 @@ h4 {
 
 /* footer */
 .footer{
+    grid-area: footer;
     background-color: #90D4C5;
-    grid-area:7 / 1 / span 1 / span 2 ;
+    
 }
 
 .footer h3 {
