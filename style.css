@@ -1,6 +1,5 @@
 html {
     box-sizing: border-box;
-    /* width: 100vw; */
 }
 
 body{
@@ -13,7 +12,7 @@ body{
     display: grid;
     width: 100%;
     grid-template-columns: 50% 50%;
-    grid-template-rows: 930px 700px 700px 700px 800px 500px 400px;
+    grid-template-rows: 100vh 43.75rem 43.75rem 43.75rem 50rem 31.25rem 25rem;
     grid-template-areas: 
     "head head"
     "transform transform-img"
@@ -26,8 +25,9 @@ body{
 
 @media only screen and (max-width: 500px){
     .container {
+        grid-auto-flow: column;
         grid-template-columns: 100%;
-        grid-template-rows: 930px 700px 700px 700px 700px 700px 700px 1200px 500px 400px; 
+        grid-template-rows: 100vh 43.75rem 43.75rem 43.75rem 43.75rem 43.75rem 43.75rem 75rem 31.25rem 16rem; 
         grid-template-areas: 
         "header"
         "transform-img"
@@ -49,7 +49,6 @@ img{
 
 /* header styles */
 .header {
-    /* border: 1px solid black; */
     grid-area: head;
     background-image: url("./images/desktop/image-header.jpg");
     background-size: cover;
@@ -59,13 +58,11 @@ img{
 
 
 header {
-    /* border: 1px solid black; */
     height: 5vh;
-    padding: 0.5rem 0.5rem 0.5rem 4px;
+    padding: 0.5rem 0.5rem 0.5rem 0.25rem;
 }
 
 .logo {
-    /* border: 1px solid black; */
     position: relative;
     top:50%;
     left:1.25rem;
@@ -74,7 +71,6 @@ header {
 }
 
 .header ul{
-    /* border: 1px solid black; */
     float: right;
     position: relative;
     bottom:5%;
@@ -114,7 +110,6 @@ li {
 }
 
 h1 {
-    /* border: 1px solid; */
     color: white;
     font-family: "Fraunces";
     font-weight: 900;
@@ -127,10 +122,8 @@ h1 {
 }
 
 .arrow {
-    /* border: 1px solid black; */
     position: relative;
     left: 50%;
-    /* margin-top: 12.5rem; */
     top: 21%;
     transform: translateX(-50%);
 }
@@ -173,12 +166,9 @@ h1 {
     background-position: center;  
 }
 
-.stand-out-image {
-    grid-area: stand-out-img
-}
 
 .stand-out-image {
-    
+    grid-area: stand-out-img;
     background-image: url("./images/desktop/image-stand-out.jpg");
     background-size: cover;
     background-position: top;
@@ -186,7 +176,6 @@ h1 {
 }
 
 .text-container {
-    /* border: 1px solid black; */
     width: 50%;
     position: relative;
     top: 50%;
@@ -208,7 +197,7 @@ h2 {
 
 .text-container a{
     font-family: "Fraunces";
-    font-size: 18px;
+    font-size: 1.125rem;
     text-decoration: none;
     color:black;
 }
@@ -231,31 +220,15 @@ h2 {
 
 @media only screen and (max-width: 500px) {
     .transform-image {
-        grid-area: transform-img;
+        
         background-position: center;
-    }
-
-    .transform {
-        grid-area: transform;
     }
 
     .stand-out-image {
-        grid-area: stand-out-img;
+
         background-position: center;
     }
-    
-    .stand-out {
-        grid-area: stand-out;
-    }
 
-    .footer {
-        grid-area: footer;
-    }
-
-
-    /* .text-container {
-
-    } */
 }
 
 /* graphic desgin and photography styles */
@@ -274,7 +247,6 @@ h2 {
 }
 
 .text {
-    /* border: 1px solid black; */
     width: 50%;
     margin:0 auto;
     position: relative;
@@ -313,12 +285,12 @@ h3 {
 
 @media only screen and (max-width: 500px) {
     .graphic-design {
-        grid-area: graphic-desgin;
+        grid-area: graphic-design;
     }
 
-    /* .photography {
+    .photography {
         grid-area: photography;
-    } */
+    }
 }
 
 .testimonials {
@@ -336,7 +308,6 @@ h4 {
 }
 
 .testimonial-flex {
-    /* border: 1px solid black; */
     display: flex;
     position: relative;
     top:50%;
@@ -354,7 +325,6 @@ h4 {
 }
 
 .profile {
-    /* border: 1px solid black; */
     width: 21.875rem;
 }
 
@@ -376,14 +346,15 @@ h4 {
     font-size: 0.875rem;
 }
 
-/* @media only screen and (max-width: 500px) { */
-    /* .testimonials {
-        grid-area: tesimonials;
-    }*/
- /* }  */
+@media only screen and (max-width: 500px) {
+    .testimonial-flex {
+        width: fit-content;
+        margin:0 auto;
+        flex-direction: column;
+    }
+ } 
 
 .gallery {
-    /* border: 1px solid black; */
     display: flex;
     grid-area: gallery;
     justify-content: center;
@@ -411,6 +382,14 @@ h4 {
     background-image: url("./images/desktop/image-gallery-sugarcubes.jpg");
 }
 
+@media only screen and (max-width: 500px) {
+    .gallery {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+}
+
 /* footer */
 .footer{
     grid-area: footer;
@@ -421,12 +400,10 @@ h4 {
 .footer h3 {
     color: hsl(168, 34%, 41%);
     font-weight: 900;
-    /* border: 1px solid black; */
     font-size: 2.25rem;
 }
 
 .footer ul {
-    /* border: 1px solid black; */
     margin: 0 auto;
     width: fit-content;
 }
@@ -438,7 +415,6 @@ h4 {
 }
 
 .socials {
-    /* border: 1px solid black; */
     display: flex;
     justify-content: space-between;
     margin: 4.6785rem auto;
