@@ -1,6 +1,6 @@
 # Front-end Style Guide
 
-## Layout
+## Layowut
 
 The designs were created to the following widths:
 

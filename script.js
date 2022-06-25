@@ -8,4 +8,4 @@ function openMenu() {
         menu.style.display = "none";
         count = 0;
     }
-}
+};
